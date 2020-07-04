@@ -14,7 +14,6 @@ class UploadView(View):
         dict_data = json.loads(json_str)
         username = dict_data.get('username', '')
         score = dict_data.get('score', '')
-        print(f"json_str==>{json_str}, username==>{username}, score==>{score}")
         if username and score:
             # 获取数据库的数据
             old_scor = Score.objects.filter(client=username).first()
