@@ -2,8 +2,10 @@ from django.urls import path
 
 from . import views
 
+
 app_name = 'tops'
 
 urlpatterns = [
-    path('', views.HelloView.as_view(), name='hello')
+    path('upload', views.UploadView.as_view(), name='upload'),
+    path('show', views.ShowView.as_view(), name='show'),
 ]
